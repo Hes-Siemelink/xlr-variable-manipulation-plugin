@@ -8,27 +8,29 @@
 -->
 <synthetic xsi:schemaLocation="http://www.xebialabs.com/deployit/synthetic synthetic.xsd" xmlns="http://www.xebialabs.com/deployit/synthetic" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
-    <type type="map.GetMapValue" extends="xlrelease.PythonScript" label="Get value">
-        <property name="map" category="input" kind="map_string_string"/>
-        <property name="key" category="input" />
-        <property name="value" category="output" label="Extracted value"/>
+    <!-- Maps -->
+
+    <type type="map.GetAValue" extends="xlrelease.PythonScript" label="Get value" description="Gets the value from a map by key.">
+        <property name="map" category="input" kind="map_string_string" description="A map to get a value from."/>
+        <property name="key" category="input" description="The key you want the value for."/>
+        <property name="value" category="output" label="Extracted value" description="The value in the map corresponding to the key."/>
     </type>
 
-    <type type="map.GetMapKeys" extends="xlrelease.PythonScript" label="Get all keys">
-        <property name="map" category="input" kind="map_string_string"/>
-        <property name="value" category="output" kind="list_of_string" label="Extracted keys"/>
+    <type type="map.GetKeys" extends="xlrelease.PythonScript" label="Get all keys" description="Gets the list of keys from a map.">
+        <property name="map" category="input" kind="map_string_string" description="A map to get the keys from."/>
+        <property name="value" category="output" kind="list_of_string" label="Extracted keys" description="A list of all keys in the map."/>
     </type>
 
-    <type type="map.GetMapValues" extends="xlrelease.PythonScript" label="Get all values">
-        <property name="map" category="input" kind="map_string_string"/>
-        <property name="value" category="output" kind="list_of_string" label="Extracted values"/>
+    <type type="map.GetValues" extends="xlrelease.PythonScript" label="Get all values" description="Gets the list of values from a map.">
+        <property name="map" category="input" kind="map_string_string" description="A map to get the values from."/>
+        <property name="value" category="output" kind="list_of_string" label="Extracted values" description="A list of all values in the map."/>
     </type>
 
-    <type type="map.RenderAsMarkdown" extends="xlrelease.PythonScript" label="As Markdown">
-        <property name="map" category="input" kind="map_string_string"/>
-        <property name="keyHeader" category="input" required="false" default="Key"/>
-        <property name="valueHeader" category="input" required="false" default="Value"/>
-        <property name="markdown" category="output" label="Map as markdown"/>
+    <type type="map.RenderAsTable" extends="xlrelease.PythonScript" label="Format as table" description="Formats the map as a markdown table for use in descriptions.">
+        <property name="map" category="input" kind="map_string_string" description="The map to display as a table."/>
+        <property name="keyHeader" category="input" required="false" default="Key" description="Label of the key column."/>
+        <property name="valueHeader" category="input" required="false" default="Value" description="Label of the value column."/>
+        <property name="markdown" category="output" label="Map as table" description="The map in markdown format."/>
     </type>
 
 </synthetic>
