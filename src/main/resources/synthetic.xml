@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--
+
+    THIS CODE AND INFORMATION ARE PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY AND/OR FITNESS
+    FOR A PARTICULAR PURPOSE. THIS CODE AND INFORMATION ARE NOT SUPPORTED BY XEBIALABS.
+
+-->
+<synthetic xsi:schemaLocation="http://www.xebialabs.com/deployit/synthetic synthetic.xsd" xmlns="http://www.xebialabs.com/deployit/synthetic" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+    <type type="map.GetMapValue" extends="xlrelease.PythonScript" label="Get value">
+        <property name="map" category="input" kind="map_string_string"/>
+        <property name="key" category="input" />
+        <property name="value" category="output" label="Extracted value"/>
+    </type>
+
+    <type type="map.GetMapKeys" extends="xlrelease.PythonScript" label="Get all keys">
+        <property name="map" category="input" kind="map_string_string"/>
+        <property name="value" category="output" kind="list_of_string" label="Extracted keys"/>
+    </type>
+
+    <type type="map.GetMapValues" extends="xlrelease.PythonScript" label="Get all values">
+        <property name="map" category="input" kind="map_string_string"/>
+        <property name="value" category="output" kind="list_of_string" label="Extracted values"/>
+    </type>
+
+    <type type="map.RenderAsMarkdown" extends="xlrelease.PythonScript" label="As Markdown">
+        <property name="map" category="input" kind="map_string_string"/>
+        <property name="keyHeader" category="input" required="false" default="Key"/>
+        <property name="valueHeader" category="input" required="false" default="Value"/>
+        <property name="markdown" category="output" label="Map as markdown"/>
+    </type>
+
+</synthetic>
