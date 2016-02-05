@@ -49,7 +49,7 @@
         <property name="result" category="output" kind="list_of_string" description="The first list with the second list added to it."/>
     </type>
 
-    <type type="list.RenderAsList" extends="xlrelease.PythonScript" label="Markdown" description="Formats the list in markdown table for use in descriptions.">
+    <type type="list.RenderAsList" extends="xlrelease.PythonScript" label="Markdown" description="Formats the list as markdown for use in descriptions.">
         <property name="list" category="input" kind="list_of_string" description="The list to render." />
         <property name="numbered" category="input" kind="boolean" description="When enabled, renders as numbered list; otherwise as bullet list."/>
         <property name="markdown" category="output" label="Markdown list" description="The list in markdown format."/>
