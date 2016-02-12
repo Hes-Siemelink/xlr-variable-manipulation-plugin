@@ -10,23 +10,23 @@
 
     <!-- Maps -->
 
-    <type type="map.GetAValue" extends="xlrelease.PythonScript" label="Get a value" description="Gets the value from a map by key.">
+    <type type="variables.MapGetValue" extends="xlrelease.PythonScript" label="Get map value" description="Gets the value from a map by key.">
         <property name="map" category="input" kind="map_string_string" description="A map to get a value from."/>
         <property name="key" category="input" description="The key you want the value for."/>
         <property name="value" category="output" label="Extracted value" description="The value in the map corresponding to the key."/>
     </type>
 
-    <type type="map.GetKeys" extends="xlrelease.PythonScript" label="Get all keys" description="Gets the list of keys from a map.">
+    <type type="variables.MapGetKeys" extends="xlrelease.PythonScript" label="Get map keys" description="Gets the list of keys from a map.">
         <property name="map" category="input" kind="map_string_string" description="A map to get the keys from."/>
-        <property name="value" category="output" kind="list_of_string" label="Extracted keys" description="A list of all keys in the map."/>
+        <property name="value" category="output" kind="list_of_string" label="Extracted keys" description="A list of all keys in the variables."/>
     </type>
 
-    <type type="map.GetValues" extends="xlrelease.PythonScript" label="Get all values" description="Gets the list of values from a map.">
+    <type type="variables.MapGetValues" extends="xlrelease.PythonScript" label="Get map values" description="Gets the list of values from a map.">
         <property name="map" category="input" kind="map_string_string" description="A map to get the values from."/>
         <property name="value" category="output" kind="list_of_string" label="Extracted values" description="A list of all values in the map."/>
     </type>
 
-    <type type="map.RenderAsTable" extends="xlrelease.PythonScript" label="Markdown" description="Formats the map as a markdown table for use in descriptions.">
+    <type type="variables.MarkdownMap" extends="xlrelease.PythonScript" label="Markdown map as table" description="Formats the map as a markdown table for use in descriptions.">
         <property name="map" category="input" kind="map_string_string" description="The map to display as a table."/>
         <property name="keyHeader" category="input" required="false" default="Key" description="Label of the key column."/>
         <property name="valueHeader" category="input" required="false" default="Value" description="Label of the value column."/>
@@ -35,21 +35,21 @@
 
     <!-- Lists -->
 
-    <type type="list.AppendValue" extends="xlrelease.PythonScript" label="Add a  value" description="Adds a value to a list.">
+    <type type="variables.ListAppendValue" extends="xlrelease.PythonScript" label="Add value to list" description="Adds a value to a list.">
         <property name="list" category="input" kind="list_of_string" description="The list to add to." />
         <property name="value" category="input" kind="string" description="The value to add to the list." />
 
-        <property name="result" category="output" kind="list_of_string" description="Thelist with the value added."/>
+        <property name="result" category="output" kind="list_of_string" description="The list with the value added."/>
     </type>
 
-    <type type="list.AppendList" extends="xlrelease.PythonScript" label="Merge lists" description="Adds one list to another list.">
+    <type type="variables.ListMerge" extends="xlrelease.PythonScript" label="Merge lists" description="Merge two lists into one.">
         <property name="list1" category="input" kind="list_of_string" description="The first list." label="List 1"/>
-        <property name="list2" category="input" kind="list_of_string" description="Will be added to the first list." label="List 2"/>
+        <property name="list2" category="input" kind="list_of_string" description="The second  list." label="List 2"/>
 
         <property name="result" category="output" kind="list_of_string" description="The first list with the second list added to it."/>
     </type>
 
-    <type type="list.RenderAsList" extends="xlrelease.PythonScript" label="Markdown" description="Formats the list as markdown for use in descriptions.">
+    <type type="variables.MarkdownList" extends="xlrelease.PythonScript" label="Markdown list" description="Formats the list as markdown for use in descriptions.">
         <property name="list" category="input" kind="list_of_string" description="The list to render." />
         <property name="numbered" category="input" kind="boolean" description="When enabled, renders as numbered list; otherwise as bullet list."/>
         <property name="markdown" category="output" label="Markdown list" description="The list in markdown format."/>
