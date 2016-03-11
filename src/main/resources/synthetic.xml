@@ -26,7 +26,7 @@
         <property name="value" category="output" kind="list_of_string" label="Extracted values" description="A list of all values in the map."/>
     </type>
 
-    <type type="variables.MarkdownMap" extends="xlrelease.PythonScript" label="Markdown map as table" description="Formats the map as a markdown table for use in descriptions.">
+    <type type="variables.MarkdownMap" extends="xlrelease.PythonScript" label="Map as markdown table" description="Formats the map as a markdown table for use in descriptions.">
         <property name="map" category="input" kind="map_string_string" description="The map to display as a table."/>
         <property name="keyHeader" category="input" required="false" default="Key" description="Label of the key column."/>
         <property name="valueHeader" category="input" required="false" default="Value" description="Label of the value column."/>
@@ -42,14 +42,14 @@
         <property name="result" category="output" kind="list_of_string" description="The list with the value added."/>
     </type>
 
-    <type type="variables.ListMerge" extends="xlrelease.PythonScript" label="Merge lists" description="Merge two lists into one.">
+    <type type="variables.ListMerge" extends="xlrelease.PythonScript" label="Merge lists" description="Adds one list to another list.">
         <property name="list1" category="input" kind="list_of_string" description="The first list." label="List 1"/>
         <property name="list2" category="input" kind="list_of_string" description="The second  list." label="List 2"/>
 
         <property name="result" category="output" kind="list_of_string" description="The first list with the second list added to it."/>
     </type>
 
-    <type type="variables.MarkdownList" extends="xlrelease.PythonScript" label="Markdown list" description="Formats the list as markdown for use in descriptions.">
+    <type type="variables.MarkdownList" extends="xlrelease.PythonScript" label="List as markdown" description="Formats the list as markdown for use in descriptions.">
         <property name="list" category="input" kind="list_of_string" description="The list to render." />
         <property name="numbered" category="input" kind="boolean" description="When enabled, renders as numbered list; otherwise as bullet list."/>
         <property name="markdown" category="output" label="Markdown list" description="The list in markdown format."/>

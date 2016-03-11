@@ -1,18 +1,18 @@
 # xlr-variable-manipulation-plugin
 
-_Work in progress. Types may still change, breaking compatibility_
-
 This plugin contains several tasks that allow you to manipulate variables without needing a Script Task.
+
+The tasks can be found in the **Variables** category.
 
 ## Map tasks
 
-* **Map: Get value**:  Gets the value from a map by key.
-* **Map: Get all keys**:  Gets the list of keys from a map.
-* **Map: Get all values**:  Gets the list of values from a map.
-* **Map: As Markdown**: Formats the map as a markdown table for use in descriptions.
+* **Get map value**:  Gets the value from a map by key.
+* **Get map keys**:  Gets the list of keys from a map.
+* **Get map values**:  Gets the list of values from a map.
+* **Map as markdown table**: Formats the map as a markdown table for use in descriptions.
 
 ## List tasks
 
-* **List: Add a value**:  Adds a value to a list.
-* **List: Merge lists**:  Adds one list to another list.
-* **List: As Markdown**:  Formats the list as markdown for use in descriptions.
+* **Add value to list**:  Adds a value to a list.
+* **Merge lists**:  Adds one list to another list.
+* **List as markdown**:  Formats the list as markdown for use in descriptions.
